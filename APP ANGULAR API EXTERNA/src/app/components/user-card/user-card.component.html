@@ -1,0 +1,22 @@
+<div class="card mb-3 bg-dark text-light shadow border-light">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img [src]="myUser?.image" class="img-fluid rounded-start" [alt]="myUser?.first_name">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <h1 class="card-title" [ngClass]="{ 'fs-6': isCard }">{{ myUser.first_name }} {{myUser.last_name}}</h1>
+        </div>
+        <ul *ngIf="!isCard">
+          <li class="card-text"><strong>Nombre Usuario:</strong> {{myUser?.username}}</li>
+          <li class="card-text"><strong>Email:</strong> {{myUser?.email}}</li>
+        </ul>
+        <button class="botoncito border-0" *ngIf="isCard" [routerLink]="['/user', myUser?.id]">Detalle</button>
+        <button class="botoncito border-0" *ngIf="!isCard" [routerLink]="['/home']">Volver a Usuarios</button>
+        <button class="botoncito border-0" [routerLink]="['/updateuser', myUser?.id]">Actualizar</button>
+        <button class="botoncito border-0" (click)="deleteUser(myUser?.id)">Borrar</button>
+      </div>
+    </div>
+  </div>
+</div>

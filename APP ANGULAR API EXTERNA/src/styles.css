@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;700&display=swap');
+:root{
+  --fontFamily:'Rubik', sans-serif;
+  --primaryColor: #5f42e7;
+  --secondaryColor: black;
+  --bgColor: #232323;
+  --fontSize: 1em;
+}
+
+img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+html{
+  background-color: var(--bgColor);
+}
+
+body{
+ font-family: var(--fontFamily) !important;
+ font-size: var(--fontSize);
+}
+
+.botoncito{
+  text-decoration: none;
+  color: white;
+  background-color: var(--primaryColor);
+  padding: 5px 15px;
+  border-radius: 30px;
+  font-size: 12px;
+   margin: 5px;
+   transition: 1s;
+}
+
+.botoncito:hover{
+  background-color: darkslateblue;
+}
